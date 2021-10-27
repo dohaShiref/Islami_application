@@ -13,7 +13,7 @@ class homeScreen extends StatefulWidget {
 }
 
 class _homeScreenState extends State<homeScreen> {
-  int currentPageIndex = 0;
+  int currentPageIndex = 3;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,14 @@ class _homeScreenState extends State<homeScreen> {
         ),
         Scaffold(
           backgroundColor: Colors.transparent,
+          appBar: AppBar(
+            elevation: 0,
+            centerTitle: true,
+            title: Text('إسلامي',style: TextStyle(
+              color: Colors.black,fontSize: 28,fontStyle: FontStyle.italic
+            ),),
+            backgroundColor: Colors.transparent,
+          ),
           bottomNavigationBar: Theme(
             data: Theme.of(context)
                 .copyWith(canvasColor: MyThemeData.Primaty_color),
@@ -51,19 +59,19 @@ class _homeScreenState extends State<homeScreen> {
                       width: 37,
                         color: currentPageIndex == 0 ? MyThemeData.SelectedIemColor : MyThemeData.UnSelectedIemColor
                     ),
-                    label: 'Radio'),
+                    label: 'الراديو'),
                 BottomNavigationBarItem(
-                    label: 'Sebha',
+                    label: 'التسبيح',
                     icon: Image.asset('assets/images/ic_sebha.png', width: 37,
                         color: currentPageIndex == 1 ? MyThemeData.SelectedIemColor : MyThemeData.UnSelectedIemColor
                     )),
                 BottomNavigationBarItem(
-                    label: 'Ahadeth',
+                    label: 'الأحاديث',
                     icon: Image.asset('assets/images/ic_book.png', width: 37,
                         color: currentPageIndex == 2 ? MyThemeData.SelectedIemColor : MyThemeData.UnSelectedIemColor
                     )),
                 BottomNavigationBarItem(
-                    label: 'Quran',
+                    label: 'القرآن',
                     icon: Image.asset('assets/images/ic_quran.png', width: 37,
                         color: currentPageIndex == 3 ? MyThemeData.SelectedIemColor : MyThemeData.UnSelectedIemColor
                     )),

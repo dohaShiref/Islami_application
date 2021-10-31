@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+import '../main.dart';
 
 class Sura_detials extends StatefulWidget {
   static const String routeName='SuraDetials';
@@ -60,6 +63,36 @@ class _Sura_detialsState extends State<Sura_detials> {
           ,
         ) ,
       ),
+      Column(
+        children: [
+          Container(
+            padding: EdgeInsets.only(top: 100),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(args.SuraName, style: TextStyle(
+                  fontSize: 26,
+                  color: Colors.black,
+                ),textAlign: TextAlign.center,),
+                Padding(
+                  padding: const EdgeInsets.only(left: 35.0,right: 75),
+                  child: Icon(
+                    Icons.play_circle_fill_rounded,
+                    color: Colors.black,
+                    size: 35,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            height: 1,
+            width: double.infinity,
+            color: MyThemeData.Primaty_color,
+            margin: EdgeInsets.symmetric(horizontal: 60),
+          ),
+        ],
+      )
     ]);
   }
 

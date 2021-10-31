@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_application/Quran/Sura_detials.dart';
+import 'package:islami_application/hadeth/hadeth_detials.dart';
 import 'package:islami_application/homeScreen.dart';
 
 void main() {
@@ -26,11 +27,13 @@ class MyApp extends StatelessWidget {
         primaryColor: MyThemeData.Primaty_color,
         progressIndicatorTheme: ProgressIndicatorThemeData(
           color: MyThemeData.Primaty_color,
-        )
+        ),
+        fontFamily: 'Monotype Koufi'
       ),
       routes: {
         homeScreen.routeName:(buildContext)=>homeScreen(),
-        Sura_detials.routeName:(buildContext)=>Sura_detials()
+        Sura_detials.routeName:(buildContext)=>Sura_detials(),
+        hadeth_detials.routeName:(buildContext)=>hadeth_detials()
       },
       initialRoute: homeScreen.routeName,
     );

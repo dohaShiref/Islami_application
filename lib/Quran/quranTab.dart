@@ -313,7 +313,7 @@ class quranTab extends StatelessWidget {
                   ],
                 ),
               );
-            }))
+            },itemCount: SurasNames.length,),)
       ],
     );
   }
